@@ -9,61 +9,71 @@ export const SAMPLE_EQUIPMENT= [
                 part: 'impeller',
                 description: 'Up Thrust',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/impeller.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'impeller',
                 description: 'Down Thrust',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/impeller.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'impeller',
                 description: 'Radial',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/impeller.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'diffuser',
                 description: 'Up Thrust',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/diffuser.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'diffuser',
                 description: 'Down Thrust',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/diffuser.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'diffuser',
                 description: 'Radial',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/diffuser.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/bearing.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/bearing.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/shaft.png',
+                comment: 'Random comment on item'
             },
             {
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Moderate',
-                image: null
+                image: '/assets/images/shaft.png',
+                comment: 'Random comment on item'
             }
         ]
     },
@@ -77,61 +87,71 @@ export const SAMPLE_EQUIPMENT= [
                 part: 'impeller',
                 description: 'Up Thrust',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/impeller2.png',
+                comment: 'Random comment on item'
             },
             {
                 part: 'impeller',
                 description: 'Down Thrust',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/impeller2.png',
+                comment: 'Random comment on item'
             },
             {
                 part: 'impeller',
                 description: 'Radial',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/impeller2.png',
+                comment: 'Random comment on item'
             },
             {
                 part: 'diffuser',
                 description: 'Up Thrust',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/diffuser.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'diffuser',
                 description: 'Down Thrust',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/diffuser.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'diffuser',
                 description: 'Radial',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/diffuser.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/bearing.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/bearing.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/shaft.png',
+                comment: 'Random comment on item'
             },
             {
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/shaft.png',
+                comment: 'Random comment on item'
             }
         ]
     },
@@ -145,25 +165,29 @@ export const SAMPLE_EQUIPMENT= [
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/bearing.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/bearing.jpg',
+                comment: 'Random comment on item'
             },
             {
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/shaft.png',
+                comment: 'Random comment on item'
             },
             {
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Severe',
-                image: null
+                image: '/assets/images/shaft.png',
+                comment: 'Random comment on item'
             }
         ]
     }
