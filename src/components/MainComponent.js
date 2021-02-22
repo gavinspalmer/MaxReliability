@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import Equipment from './EquipmentComponent';
-import EquipmentPagination from './EquipmentPaginationComponent.js'
-import EquipmentDetails from './EquipmentDetailsComponent.js';
+import Parts from './PartsComponent';
 
 import { SAMPLE_CUSTOMER } from '../shared/sampleCustomer';
 import { SAMPLE_EQUIPMENT } from '../shared/sampleEquipment';
@@ -26,7 +25,7 @@ class Main extends Component {
             <div>
                 <Header />
                 <Equipment equipment={this.state.equipment} onclick={(equipmentId) => this.onEquipmentSelect(equipmentId)} />
-                {/*<EquipmentPagination equipment={this.state.equipment.filter((equipment) => equipment.id === this.state.selectedEquipment)[0]} />*/}
+                <Parts equipment={this.state.equipment.filter((equipment) => equipment.id === this.state.selectedEquipment)[0]} />
                 {/*<EquipmentDetails equipment={this.state.equipment.filter((equipment) => equipment.id === this.state.selectedEquipment)[0]} />*/}
             </div>
         );

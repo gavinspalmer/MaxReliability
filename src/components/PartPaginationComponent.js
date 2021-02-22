@@ -1,8 +1,29 @@
+import React from 'react';
+
+
+const PartPagination = (props) => {
+  if (props.equipment.details == undefined || props.equipment.details.length < 1 ) {
+    return (
+      <div></div>
+    );
+  }
+  else {
+  
+
+    //Get component Page numbers
+    //Add Pagination bar
+
+    return (
+      <div>
+
+      </div>
+    );
+  }
+}
+
+/*
 // https://www.digitalocean.com/community/tutorials/how-to-build-custom-pagination-with-react
 // Sample - Rebuild as a functional component
-
-import React, { Component, Fragment } from 'react';
-
 const LEFT_PAGE = 'LEFT';
 const RIGHT_PAGE = 'RIGHT';
 
@@ -149,4 +170,5 @@ EquipmentPagination.propTypes = {
     onPageChanged: PropTypes.func
 };*/
 
-export default EquipmentPagination;
+
+export default PartPagination;

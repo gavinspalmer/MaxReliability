@@ -1,3 +1,4 @@
+//Generates table of equipment from the set
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 

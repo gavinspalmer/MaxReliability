@@ -1,3 +1,4 @@
+//The card of the selected part
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
@@ -18,7 +19,7 @@ function RenderComponentDetails({component}) {
 }
 
 
-const EquipmentDetails = (props) => {
+const PartDetails = (props) => {
     
     return(
         <div>
@@ -27,4 +28,4 @@ const EquipmentDetails = (props) => {
     )
 }
 
-export default EquipmentDetails;
+export default PartDetails;
