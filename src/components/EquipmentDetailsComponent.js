@@ -1,16 +1,16 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
-function RenderEquipmentDetails({equipment}) {
+function RenderComponentDetails({component}) {
     return(
         <div>
             <Card>
-                <CardImg top width="100%" src={equipment.image} />
+                <CardImg top width="100%" src={component.image} />
                 <CardBody>
-                    <CardTitle tag="h5">{equipment.part}</CardTitle>
-                    <CardSubtitle tag="h6">{equipment.description}: {equipment.condition}</CardSubtitle>
+                    <CardTitle tag="h5">{component.part}</CardTitle>
+                    <CardSubtitle tag="h6">{component.description}: {component.condition}</CardSubtitle>
                     <CardSubtitle tag="h6">Comments</CardSubtitle>
-                    <CardText>{equipment.comment}</CardText>
+                    <CardText>{component.comment}</CardText>
                 </CardBody>
             </Card>
         </div>
@@ -19,8 +19,10 @@ function RenderEquipmentDetails({equipment}) {
 
 
 const EquipmentDetails = (props) => {
+    
     return(
         <div>
+            <RenderComponentDetails component={props.equipment} />
         </div>
     )
 }
