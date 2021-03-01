@@ -8,8 +8,11 @@ import React from 'react';
 
 const Parts = (props) => {
 
+
     return (
         <div>
+            //returns PartDetailsComponent
+            //returns PartPaginationComponent
         </div>
     );
 }

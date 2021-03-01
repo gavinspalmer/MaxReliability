@@ -1,22 +1,104 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
+//Provided currentPage and totalPages
+//Generates Pagination based on location
+const LEFT_ARROW = 'LEFT';
+const RIGHT_ARROW = 'RIGHT';
+
+const pageRange = (from, to) => {
+  let i = from;
+  const range = [];
+  while (i <= to) {
+      range.push(i);
+      i++;
+  }
+  return pageRange;
+}
+
+/* (1) < {8 9} [10] {11 12} > (end)
+    (x) -> First and last page are always visible
+    [x] -> Current page
+    {...x} -> Page neighbours
+
+*/
+
+function buildPages(currentPart, parts) {
+  const totalPages = parts.length;
+  
+  if (totalPages > 9) {
+    const currentPage = currentPart;
+    const startPage = Math.max(2, currentPage - 2);
+    const endPage = Math.min(totalPages - 1, currentPage + 2);
+    let pages = pageRange(startPage, endPage)
+
+    const hasLeftSpill = currentPage > 5;
+    const hasRightSpill = (totalPages - currentPage) < 5;
+    const spillOffset = totalPages - (parts.length + 1);
+    
+    switch(true) {
+      //handle [1] {2 3 4 5 6 7} > (end) TO (1) {2 3 4} [5] {6 7} > (end)
+      case(!hasLeftSpill && hasRightSpill): {
+        const extraPages = pageRange(endPage + 1, endPage + spillOffset);
+        pages = [...pages, ...extraPages, RIGHT_ARROW];
+        break;
+      }
+      //handle (1) < {14 15} [16] {17 18 19} (20) TO (1) < {14 15 16 17 18 19} [20] 
+      //**20 would be totalPages**
+      case(hasLeftSpill && !hasRightSpill): {
+        const extraPages = pageRange(startPage - spillOffset, startPage -1);
+        pages = [LEFT_ARROW, ...extraPages, ...pages];
+        break;
+      }
+      //handle (1) < {8 9} [10] {11 12} > (end)
+      case(hasLeftSpill && hasRightSpill):
+      default: {
+        pages = [LEFT_ARROW, ...pages, RIGHT_ARROW];
+        break;
+      }
+    }
+    return [1, ...pages, totalPages];
+  }
+  return range(1, totalPages)
+}
 
 const PartPagination = (props) => {
-  if (props.equipment.details == undefined || props.equipment.details.length < 1 ) {
+  if (props.equipment.details || props.equipment.details.length) {
+    const pages = this.buildPages(currentPart, props.equipment.details);
     return (
-      <div></div>
+      <Fragment>
+        <nav aria-label="Parts Pagination">
+          <ul className="pagination">
+            {pages.map((page, index) => {
+              if (page === LEFT_ARROW) return (
+                <li key={index} className="page-item">
+                  <a className="page-link" href="#" aria-label="Previous" onClick={this.handleMoveLeft}>
+                    <span aria-hidden="true">&laquo;</span>
+                    <span className="sr-only">Previous</span>
+                  </a>
+                </li>
+              );
+              if (page === RIGHT_PAGE) return (
+                <li key={index} className="page-item">
+                  <a className="page-link" href="#" aria-label="Next" onClick={this.handleMoveRight}>
+                    <span aria-hidden="true">&raquo;</span>
+                    <span className="sr-only">Next</span>
+                  </a>
+                </li>
+              );
+              return (
+                <li key={index} className={`page-item${ currentPage === page ? ' active' : ''}`}>
+                  <a className="page-link" href="#" onClick={ this.handleClick(page) }>{ page }</a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </Fragment>
     );
   }
   else {
-  
-
-    //Get component Page numbers
-    //Add Pagination bar
-
     return (
-      <div>
-
-      </div>
+      <div></div>
     );
   }
 }
@@ -27,14 +109,14 @@ const PartPagination = (props) => {
 const LEFT_PAGE = 'LEFT';
 const RIGHT_PAGE = 'RIGHT';
 
-const range = (from, to) => {
+const pageRange = (from, to) => {
     let i = from;
     const range = [];
     while (i <= to) {
         range.push(i);
         i++;
     }
-    return range;
+    return pageRange;
 }
 
 class EquipmentPagination extends Component {
