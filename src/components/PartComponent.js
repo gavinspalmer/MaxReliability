@@ -1,6 +1,6 @@
 //Generates the Part Pagination and Part Details Card
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardHeader } from 'reactstrap';
 import PartDetails from './PartDetailsComponent';
 
 //Receives equipment selected
@@ -10,13 +10,19 @@ import PartDetails from './PartDetailsComponent';
 
 function RenderPart({part}) {
     return(
-        <Card>
-            <CardImg width="100%" object src={part.image}/>
-            <CardBody>
-                <CardTitle>{part.part}</CardTitle>
-                <CardText>{part.description}</CardText>
-            </CardBody>
-        </Card>
+        <div>
+            <Card>
+                <CardHeader style={{ textTransform: 'uppercase'}} tag="h5">{part.part}</CardHeader>
+                <CardImg object src={part.image}/>
+                <CardBody>
+                    <CardSubtitle tag="h6">{part.description}: {part.condition}</CardSubtitle>
+                    <p></p>
+                    <CardSubtitle tag="h6">Comments</CardSubtitle>
+                    <CardText>{part.comment}</CardText>
+                </CardBody>
+            </Card>
+        </div>
+        
     );
 }
 
@@ -26,7 +32,7 @@ const Parts = (props) => {
     if (props.equip != null) {
         const partList = props.equip.details.map((part) => {
             return (
-                <div key={part.id} classname="col-12">
+                <div key={part.id} className="col-12">
                     <RenderPart part={part} />
                 </div>
             )
@@ -37,13 +43,12 @@ const Parts = (props) => {
                 <div className="row">
                     {partList}
                 </div>
-                Test Space
             </div>
         );
     }
     else {
         return (
-            <div>Nothing Selected</div>
+            <div></div>
         );
     }
     
