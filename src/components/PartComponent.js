@@ -1,6 +1,7 @@
 //Generates the Part Pagination and Part Details Card
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardHeader } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardHeader, Row, Label, Col, Form, Input } from 'reactstrap';
+import { Control, Errors, actions } from 'react-redux-form';
 import PartDetails from './PartDetailsComponent';
 
 //Receives equipment selected
@@ -15,12 +16,34 @@ function RenderPart({part}) {
                 <CardHeader style={{ textTransform: 'uppercase'}} tag="h5">{part.part}</CardHeader>
                 <CardImg object src={part.image}/>
                 <CardBody>
-                    <CardSubtitle tag="h6">{part.description}: {part.condition}</CardSubtitle>
-                    <p></p>
-                    <CardSubtitle tag="h6">Comments</CardSubtitle>
-                    <CardText>{part.comment}</CardText>
+                    <Form>
+                        <Row className="form-group">
+                            <Label htmlFor="condition" size="lg" md={12}>Condition:</Label>
+                            <Col md={2}>
+                                <Label htmlFor="description">{part.description}: </Label>
+                            </Col>
+                            <Col>  
+                                <Input type="select" name="condition" value={part.condition}>
+                                    <option>Negligible</option>
+                                    <option>Light</option>
+                                    <option>Moderate</option>
+                                    <option>Severe</option>
+                                </Input>
+                            </Col>   
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="comments" size="lg" md={12}>Comments:</Label>
+                            <Col md={12}>
+                                <Input type="textarea" id="comments" name="comments" 
+                                    value={part.comment}
+                                    rows="6"
+                                    className="form-control"/>
+                            </Col>
+                        </Row>
+                    </Form>
                 </CardBody>
             </Card>
+            
         </div>
         
     );
