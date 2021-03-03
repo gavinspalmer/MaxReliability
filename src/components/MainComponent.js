@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import Equipment from './EquipmentComponent';
 import Parts from './PartComponent';
-
-import { SAMPLE_CUSTOMER } from '../shared/sampleCustomer';
 import { SAMPLE_EQUIPMENT } from '../shared/sampleEquipment';
 
 class Main extends Component {
@@ -24,8 +22,8 @@ class Main extends Component {
         return (
             <div>
                 <Header />
-                <Equipment equipment={this.state.equipment} onclick={(equipmentId) => this.onEquipmentSelect(equipmentId)} />
-                <Parts equipment={this.state.equipment.filter((equipment) => equipment.id === this.state.selectedEquipment)[0]} />
+                <Equipment equipment={this.state.equipment} onClick={(equipmentId) => this.onEquipmentSelect(equipmentId)} />
+                <Parts equip={this.state.equipment.filter((equip) => equip.id === this.state.selectedEquipment)[0]} />
             </div>
         );
     }    

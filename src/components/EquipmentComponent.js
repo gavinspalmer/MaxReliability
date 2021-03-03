@@ -4,7 +4,9 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 
 function RenderEquipmentList({equipment, onClick}) {
     return(
-        <ListGroupItem tag="a" href="#">{equipment.component} - {equipment.description}</ListGroupItem>
+        <ListGroup onClick={() => onClick(equipment.id)}>
+            <ListGroupItem tag="a" href="#">{equipment.component} - {equipment.description}</ListGroupItem>
+        </ListGroup>
     );
 }
 
@@ -12,9 +14,7 @@ const Equipment = (props) => {
     const equipmentList = props.equipment.map((equipment) => {
         return (
             <div>
-                <ListGroup>
-                    <RenderEquipmentList equipment={equipment} onClick={props.onClick} />
-                </ListGroup>
+                <RenderEquipmentList equipment={equipment} onClick={props.onClick} />
             </div>
         );
     });

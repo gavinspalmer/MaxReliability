@@ -6,6 +6,7 @@ export const SAMPLE_EQUIPMENT= [
         component: 'pump',
         details: [
             {
+                id: 0,
                 part: 'impeller',
                 description: 'Up Thrust',
                 condition: 'Moderate',
@@ -13,6 +14,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 1,
                 part: 'impeller',
                 description: 'Down Thrust',
                 condition: 'Moderate',
@@ -20,6 +22,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 2,
                 part: 'impeller',
                 description: 'Radial',
                 condition: 'Moderate',
@@ -27,6 +30,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 3,
                 part: 'diffuser',
                 description: 'Up Thrust',
                 condition: 'Moderate',
@@ -34,6 +38,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 4,
                 part: 'diffuser',
                 description: 'Down Thrust',
                 condition: 'Moderate',
@@ -41,6 +46,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 5,
                 part: 'diffuser',
                 description: 'Radial',
                 condition: 'Moderate',
@@ -48,6 +54,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 6,
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Moderate',
@@ -55,6 +62,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 7,
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Moderate',
@@ -62,6 +70,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 8,
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Moderate',
@@ -69,6 +78,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 9,
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Moderate',
@@ -84,6 +94,7 @@ export const SAMPLE_EQUIPMENT= [
         component: 'pump',
         details: [
             {
+                id: 0,
                 part: 'impeller',
                 description: 'Up Thrust',
                 condition: 'Severe',
@@ -91,6 +102,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 1,
                 part: 'impeller',
                 description: 'Down Thrust',
                 condition: 'Severe',
@@ -98,6 +110,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 2,
                 part: 'impeller',
                 description: 'Radial',
                 condition: 'Severe',
@@ -105,6 +118,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 3,
                 part: 'diffuser',
                 description: 'Up Thrust',
                 condition: 'Severe',
@@ -112,6 +126,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 4,
                 part: 'diffuser',
                 description: 'Down Thrust',
                 condition: 'Severe',
@@ -119,6 +134,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 5,
                 part: 'diffuser',
                 description: 'Radial',
                 condition: 'Severe',
@@ -126,6 +142,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 6,
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Severe',
@@ -133,6 +150,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 7,
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Severe',
@@ -140,6 +158,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 8,
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Severe',
@@ -147,6 +166,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 9,
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Severe',
@@ -162,6 +182,7 @@ export const SAMPLE_EQUIPMENT= [
         component: 'intake',
         details: [
             {
+                id: 0,
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Severe',
@@ -169,6 +190,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 1,
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Severe',
@@ -176,6 +198,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 2,
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Severe',
@@ -183,6 +206,7 @@ export const SAMPLE_EQUIPMENT= [
                 comment: 'Random comment on item'
             },
             {
+                id: 3,
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Severe',

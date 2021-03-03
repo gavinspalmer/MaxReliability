@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
 function RenderComponentDetails({component}) {
+    console.log (component);
     return(
         <div>
             <Card>
@@ -23,7 +24,7 @@ const PartDetails = (props) => {
     
     return(
         <div>
-            <RenderComponentDetails component={props.equipment} />
+            <RenderComponentDetails component={props.equipment.details} />
         </div>
     )
 }
