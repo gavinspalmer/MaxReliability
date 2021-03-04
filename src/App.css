@@ -1,3 +1,15 @@
 .navbar-dark {
+  color:azure;
+  background-color: #5D5C61;
+}
+
+.btn {
+  color:azure;
+  background-color: #557A95;
+  outline: #557A95;
+}
+
+.modal-header{
+  color:azure;
   background-color: #5D5C61;
 }

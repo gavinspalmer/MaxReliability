@@ -5,7 +5,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 function RenderEquipmentList({equipment, onClick}) {
     return(
         <ListGroup onClick={() => onClick(equipment.id)}>
-            <ListGroupItem tag="a" href="#">{equipment.component} - {equipment.description}</ListGroupItem>
+            <ListGroupItem style={{ textTransform: 'uppercase'}} tag="a" href="#">{equipment.component} - {equipment.description}</ListGroupItem>
         </ListGroup>
     );
 }

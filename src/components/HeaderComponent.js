@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoginModal from './LoginComponent';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -44,6 +45,11 @@ class Header extends Component {
                                     <NavLink className="nav-link" to='/'>
                                         <span>Export</span>
                                     </NavLink>
+                                </NavItem>
+                            </Nav>
+                            <Nav className="ml-auto" navbar>
+                                <NavItem>
+                                    <LoginModal />
                                 </NavItem>
                             </Nav>
                         </Collapse>

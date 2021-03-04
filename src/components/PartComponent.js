@@ -1,6 +1,6 @@
 //Generates the Part Pagination and Part Details Card
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardHeader, Row, Label, Col, Form, Input } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardHeader, Row, Label, Col, Form, Input, FormGroup, FormControl, FormLabel } from 'reactstrap';
 import { Control, Errors, actions } from 'react-redux-form';
 import PartDetails from './PartDetailsComponent';
 
@@ -18,7 +18,7 @@ function RenderPart({part}) {
                 <CardBody>
                     <Form>
                         <Row className="form-group">
-                            <Label htmlFor="condition" size="lg" md={12}>Condition:</Label>
+                            <Label htmlFor="condition" size="lg" md={12}>Wear Condition:</Label>
                             <Col md={2}>
                                 <Label htmlFor="description">{part.description}: </Label>
                             </Col>
@@ -34,24 +34,32 @@ function RenderPart({part}) {
                         <Row className="form-group">
                             <Label htmlFor="comments" size="lg" md={12}>Comments:</Label>
                             <Col md={12}>
-                                <Input type="textarea" id="comments" name="comments" 
+                                <Input type="textarea" id="comment" name="comment" 
                                     value={part.comment}
                                     rows="6"
                                     className="form-control"/>
                             </Col>
                         </Row>
+                        {/*<Form.Group controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Comments: </Form.Label>
+                            <Form.Control as="textarea" rows={3} />
+                        </Form.Group>*/}
                     </Form>
                 </CardBody>
             </Card>
+            <br />
             
         </div>
         
     );
 }
 
+
+
 const Parts = (props) => {
     console.log ('Made it to Parts!!')
     console.log (props.equip)
+
     if (props.equip != null) {
         const partList = props.equip.details.map((part) => {
             return (
