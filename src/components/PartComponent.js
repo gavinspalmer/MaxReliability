@@ -40,10 +40,6 @@ function RenderPart({part}) {
                                     className="form-control"/>
                             </Col>
                         </Row>
-                        {/*<Form.Group controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Comments: </Form.Label>
-                            <Form.Control as="textarea" rows={3} />
-                        </Form.Group>*/}
                     </Form>
                 </CardBody>
             </Card>

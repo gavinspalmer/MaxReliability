@@ -1,11 +1,11 @@
 //Generates table of equipment from the set
 import React from 'react';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { ListGroup, ListGroupItem, Button } from 'reactstrap';
 
 function RenderEquipmentList({equipment, onClick}) {
     return(
         <ListGroup onClick={() => onClick(equipment.id)}>
-            <ListGroupItem style={{ textTransform: 'uppercase'}} tag="a" href="#">{equipment.component} - {equipment.description}</ListGroupItem>
+            <Button style={{ textTransform: 'uppercase'}} tag="a" href="#">{equipment.component} - {equipment.description}</Button>
         </ListGroup>
     );
 }
