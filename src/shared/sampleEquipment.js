@@ -7,6 +7,7 @@ export const SAMPLE_EQUIPMENT= [
         details: [
             {
                 id: 0,
+                equipId: 0,
                 part: 'impeller',
                 description: 'Up Thrust',
                 condition: 'Moderate',
@@ -15,6 +16,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 1,
+                equipId: 0,
                 part: 'impeller',
                 description: 'Down Thrust',
                 condition: 'Moderate',
@@ -23,6 +25,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 2,
+                equipId: 0,
                 part: 'impeller',
                 description: 'Radial',
                 condition: 'Moderate',
@@ -31,6 +34,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 3,
+                equipId: 0,
                 part: 'diffuser',
                 description: 'Up Thrust',
                 condition: 'Moderate',
@@ -39,6 +43,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 4,
+                equipId: 0,
                 part: 'diffuser',
                 description: 'Down Thrust',
                 condition: 'Moderate',
@@ -47,6 +52,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 5,
+                equipId: 0,
                 part: 'diffuser',
                 description: 'Radial',
                 condition: 'Moderate',
@@ -55,6 +61,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 6,
+                equipId: 0,
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Moderate',
@@ -63,6 +70,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 7,
+                equipId: 0,
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Moderate',
@@ -71,6 +79,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 8,
+                equipId: 0,
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Moderate',
@@ -79,6 +88,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 9,
+                equipId: 0,
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Moderate',
@@ -95,6 +105,7 @@ export const SAMPLE_EQUIPMENT= [
         details: [
             {
                 id: 0,
+                equipId: 1,
                 part: 'impeller',
                 description: 'Up Thrust',
                 condition: 'Severe',
@@ -103,6 +114,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 1,
+                equipId: 1,
                 part: 'impeller',
                 description: 'Down Thrust',
                 condition: 'Severe',
@@ -111,6 +123,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 2,
+                equipId: 1,
                 part: 'impeller',
                 description: 'Radial',
                 condition: 'Severe',
@@ -119,6 +132,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 3,
+                equipId: 1,
                 part: 'diffuser',
                 description: 'Up Thrust',
                 condition: 'Severe',
@@ -127,6 +141,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 4,
+                equipId: 1,
                 part: 'diffuser',
                 description: 'Down Thrust',
                 condition: 'Severe',
@@ -135,6 +150,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 5,
+                equipId: 1,
                 part: 'diffuser',
                 description: 'Radial',
                 condition: 'Severe',
@@ -143,6 +159,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 6,
+                equipId: 1,
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Severe',
@@ -151,6 +168,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 7,
+                equipId: 1,
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Severe',
@@ -159,6 +177,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 8,
+                equipId: 1,
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Severe',
@@ -167,6 +186,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 9,
+                equipId: 1,
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Severe',
@@ -183,6 +203,7 @@ export const SAMPLE_EQUIPMENT= [
         details: [
             {
                 id: 0,
+                equipId: 2,
                 part: 'bearing',
                 description: 'Head Bearing',
                 condition: 'Severe',
@@ -191,6 +212,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 1,
+                equipId: 2,
                 part: 'bearing',
                 description: 'Base Bearing',
                 condition: 'Severe',
@@ -199,6 +221,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 2,
+                equipId: 2,
                 part: 'shaft',
                 description: 'Head Shaft Splines',
                 condition: 'Severe',
@@ -207,6 +230,7 @@ export const SAMPLE_EQUIPMENT= [
             },
             {
                 id: 3,
+                equipId: 2,
                 part: 'shaft',
                 description: 'Base Shaft Splines',
                 condition: 'Severe',
