@@ -3,6 +3,9 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardHeader, Row, Label, Col, Form, Input, FormGroup, FormControl, FormLabel } from 'reactstrap';
 import { Control, Errors, actions } from 'react-redux-form';
 import PartDetails from './PartDetailsComponent';
+import { Link } from 'react-router-dom';
+import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 //Receives equipment selected
 //Provides information to generate pagination (PartPaginationComponent.js)
@@ -14,7 +17,7 @@ function RenderPart({part}) {
         <div>
             <Card>
                 <CardHeader style={{ textTransform: 'uppercase'}} tag="h5">{part.part}</CardHeader>
-                <CardImg object src={part.image}/>
+                <CardImg object src={baseUrl + part.image}/>
                 <CardBody>
                     <Form>
                         <Row className="form-group">
@@ -54,10 +57,44 @@ function RenderPart({part}) {
 
 const Parts = (props) => {
     console.log ('Made it to Parts!!')
-    console.log (props.equip)
+    console.log (props.parts)
+    const partList = props.parts.map((part) => {
+        return (
+            <div key={part.id} className="col-12">
+                <RenderPart part={part} />
+            </div>
+        );
+    });
 
-    if (props.equip != null) {
-        const partList = props.equip.details.map((part) => {
+    if (props.parts.isLoading) {
+        return(
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    else if (props.parts.errMess) {
+        return(
+            <div className="container">
+                <div className="row">
+                    <h4>{props.parts.errorMessage}</h4>
+                </div>
+            </div>
+        );
+    }
+    else {
+        return(
+            <div class="container">
+                <div className="row">
+                    {partList}
+                </div>
+            </div>
+        );
+    }
+    /*if (props.parts != null) {
+        const partList = props.parts.map((part) => {
             return (
                 <div key={part.id} className="col-12">
                     <RenderPart part={part} />
@@ -77,7 +114,7 @@ const Parts = (props) => {
         return (
             <div></div>
         );
-    }
+    }*/
     
     /*
     return (

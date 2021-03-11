@@ -2,16 +2,38 @@ import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import Equipment from './EquipmentComponent';
 import Parts from './PartComponent';
-import { SAMPLE_EQUIPMENT } from '../shared/sampleEquipment';
+import { Switch, Route, Redirect, withRouter, useParams } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchEquipment, fetchParts } from '../redux/ActionCreators'; 
+import { actions } from 'react-redux-form';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
+const mapStateToProps = state => {
+    return {
+        equipment: state.equipment,
+        parts: state.parts,
+        selectedEquipment: null
+    }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+    fetchEquipment: () => {dispatch(fetchEquipment())},
+    fetchParts: () => {dispatch(fetchParts())}
+});
 
 class Main extends Component {
     constructor(props) {
         super(props);
         
-        this.state = {
+        /*this.state = {
             equipment: SAMPLE_EQUIPMENT,
             selectedEquipment: null
-        };
+        };*/
+    }
+
+    componentDidMount() {
+        this.props.fetchEquipment();
+        this.props.fetchParts();
     }
 
     onEquipmentSelect(equipmentId) {
@@ -19,14 +41,20 @@ class Main extends Component {
     }
     
     render() {
+
         return (
             <div>
                 <Header />
-                <Equipment equipment={this.state.equipment} onClick={(equipmentId) => this.onEquipmentSelect(equipmentId)} />
-                <Parts equip={this.state.equipment.filter((equip) => equip.id === this.state.selectedEquipment)[0]} />
+                <Equipment equipment={this.props.equipment} 
+                    onClick={(equipmentId) => this.onEquipmentSelect(equipmentId)} 
+                />
+                <Parts parts={this.props.parts.parts.filter((parts) => parts.equipmentId === 0)}
+                    isLoading={this.props.parts.isLoading}
+                    errorMessage={this.props.parts.errorMessage}
+                />
             </div>
         );
     }    
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
