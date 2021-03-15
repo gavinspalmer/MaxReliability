@@ -83,3 +83,10 @@ export const addParts = (parts) => ({
     type: ActionTypes.ADD_PARTS,
     payload: parts
 });
+
+export const updatePartCondition = (equipId, partId, condition) => ({
+    type: ActionTypes.UPDATE_PART_CONDITION,
+    equipmentId: equipId,
+    id: partId,
+    payload: condition
+});

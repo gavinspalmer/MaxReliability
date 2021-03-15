@@ -19,7 +19,7 @@ export const Equipment = (state = {
         case ActionTypes.SELECT_EQUIPMENT:
             return {...state, selectedEquipment: action.payload};
         
-            default:
+        default:
             return state;
     }
 }

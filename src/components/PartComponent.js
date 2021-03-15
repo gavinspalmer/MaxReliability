@@ -6,6 +6,8 @@ import PartDetails from './PartDetailsComponent';
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
+import { updatePartCondition } from '../redux/ActionCreators';
+import { getByDisplayValue } from '@testing-library/react';
 
 //Receives equipment selected
 //Provides information to generate pagination (PartPaginationComponent.js)
@@ -25,13 +27,22 @@ function RenderPart({part}) {
                             <Col md={2}>
                                 <Label htmlFor="description">{part.description}: </Label>
                             </Col>
-                            <Col>  
-                                <Input type="select" name="condition" value={part.condition}>
+                            <Col>
+                                {/*onChange={() => updatePartCondition(part.id, event.target.value)}*/}  
+                                <Control.select model =".condition" name="condition" className="form-control" value={part.condition}    
+                                    onChange={() => console.log("Value: " + value)}
+                                >
+                                    <option value="Negligible">Negligible</option>
+                                    <option value="Light">Light</option>
+                                    <option value="Moderate">Moderate</option>
+                                    <option value="Severe">Severe</option>
+                                </Control.select>
+                                {/*<Input type="select" name="condition" value={part.condition}>
                                     <option>Negligible</option>
                                     <option>Light</option>
                                     <option>Moderate</option>
                                     <option>Severe</option>
-                                </Input>
+                                </Input>*/}
                             </Col>   
                         </Row>
                         <Row className="form-group">
@@ -56,8 +67,6 @@ function RenderPart({part}) {
 
 
 const Parts = (props) => {
-    console.log ('Made it to Parts!!')
-    console.log (props.parts)
     const partList = props.parts.map((part) => {
         return (
             <div key={part.id} className="col-12">

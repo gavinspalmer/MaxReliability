@@ -14,6 +14,15 @@ export const Parts = (state = {
 
         case ActionTypes.PARTS_FAILED:
             return {...state, isLoading: false, errorMessage: action.payload, parts: []};
+
+        /*case ActionTypes.UPDATE_PART_CONDITION:
+            return update(state, {
+                parts:{
+                    [action.id]: {
+                        condition: action.payload
+                    }
+                }
+            });*/
         
         default:
             return state;
