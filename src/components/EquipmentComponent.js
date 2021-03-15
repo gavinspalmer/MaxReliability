@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 
-function RenderEquipmentList({equipment, onClick}) {
+function RenderEquipmentList({equipment, selectEquipment}) {
     return(
-        /*<ListGroup onClick={() => onClick(equipment.id)}> */
-        <ListGroup onClick={() => onClick(equipment.id)}>
-            <Button style={{ textTransform: 'uppercase'}} tag="a" href="#">{equipment.component} - {equipment.description}</Button>
+        <ListGroup>
+            <Button onClick={() => selectEquipment(equipment.id)} style={{ textTransform: 'uppercase'}} tag="a" href="#">{equipment.component} - {equipment.description}</Button>
         </ListGroup>
     );
 }
@@ -19,7 +18,7 @@ const Equipment = (props) => {
         return (
             <div>
                 {/*<RenderEquipmentList equipment={equipment} onClick={props.onClick} />*/}
-                <RenderEquipmentList equipment={equipment} onClick={props.onClick}/>
+                <RenderEquipmentList equipment={equipment} selectEquipment={props.selectEquipment}/>
             </div>
         );
     });

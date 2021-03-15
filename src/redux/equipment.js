@@ -3,6 +3,7 @@ import * as ActionTypes from './ActionTypes';
 export const Equipment = (state = {
         isLoading: true,
         errorMessage: null,
+        selectedEquipment: null,
         equipment: []
     }, action) => {
     switch(action.type) {
@@ -14,6 +15,9 @@ export const Equipment = (state = {
 
         case ActionTypes.EQUIPMENT_FAILED:
             return {...state, isLoading: false, errorMessage: action.payload, equipment: []};
+
+        case ActionTypes.SELECT_EQUIPMENT:
+            return {...state, selectedEquipment: action.payload};
         
             default:
             return state;

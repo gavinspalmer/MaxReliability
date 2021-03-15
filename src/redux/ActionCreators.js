@@ -40,6 +40,11 @@ export const addEquipment = (equipment) => ({
     payload: equipment
 });
 
+export const selectEquipment = (equipment) => ({
+    type: ActionTypes.SELECT_EQUIPMENT,
+    payload: equipment
+});
+
 //PARTS
 export const fetchParts = () => (dispatch) => {
 

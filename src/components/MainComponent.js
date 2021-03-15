@@ -4,7 +4,7 @@ import Equipment from './EquipmentComponent';
 import Parts from './PartComponent';
 import { Switch, Route, Redirect, withRouter, useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchEquipment, fetchParts } from '../redux/ActionCreators'; 
+import { fetchEquipment, fetchParts, selectEquipment } from '../redux/ActionCreators'; 
 import { actions } from 'react-redux-form';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
@@ -18,7 +18,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => ({
     fetchEquipment: () => {dispatch(fetchEquipment())},
-    fetchParts: () => {dispatch(fetchParts())}
+    fetchParts: () => {dispatch(fetchParts())},
+    selectEquipment: (selectedEquipment) => dispatch(selectEquipment(selectedEquipment))
 });
 
 class Main extends Component {
@@ -45,10 +46,12 @@ class Main extends Component {
         return (
             <div>
                 <Header />
+                {/*onClick={(equipmentId) => this.onEquipmentSelect(equipmentId)} */}
                 <Equipment equipment={this.props.equipment} 
-                    onClick={(equipmentId) => this.onEquipmentSelect(equipmentId)} 
+                    selectEquipment={this.props.selectEquipment}
                 />
-                <Parts parts={this.props.parts.parts.filter((parts) => parts.equipmentId === 0)}
+                {/*<Parts parts={this.props.parts.parts.filter((parts) => this.props.equipment.selectedEquipment)} */}
+                <Parts parts={this.props.parts.parts.filter((parts) => parts.equipmentId === this.props.equipment.selectedEquipment)}
                     isLoading={this.props.parts.isLoading}
                     errorMessage={this.props.parts.errorMessage}
                 />
