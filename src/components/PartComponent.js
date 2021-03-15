@@ -30,7 +30,7 @@ function RenderPart({part}) {
                             <Col>
                                 {/*onChange={() => updatePartCondition(part.id, event.target.value)}*/}  
                                 <Control.select model =".condition" name="condition" className="form-control" value={part.condition}    
-                                    onChange={() => console.log("Value: " + value)}
+                                    onChange={() => console.log("partId: " + part.id + "      equipId: " + part.equipmentId)}
                                 >
                                     <option value="Negligible">Negligible</option>
                                     <option value="Light">Light</option>
