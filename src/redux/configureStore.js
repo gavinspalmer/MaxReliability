@@ -1,4 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { composeWithDevTools} from 'redux-devtools-extension';
 import { createForms } from 'react-redux-form';
 import { Equipment } from './equipment';
 import { Parts } from './parts';
@@ -11,7 +12,7 @@ export const ConfigureStore = () => {
             equipment: Equipment,
             parts: Parts
         }),
-        applyMiddleware(thunk, logger)
+        composeWithDevTools(applyMiddleware(thunk, logger))
     );
     
     return store;
